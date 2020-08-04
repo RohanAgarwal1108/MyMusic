@@ -3,11 +3,15 @@ package com.example.mymusic;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+
+import android.content.Intent;
 import android.os.Bundle;
+import android.os.Parcelable;
 import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
@@ -35,8 +39,29 @@ public class MainActivity extends AppCompatActivity {
         recyclerView.setLayoutManager(layoutManager);
         myDataset.add(new Music("Hello1", "Hello1","Hello1", "hello1", false));
         myDataset.add(new Music("Hello", "Hello","Hello", "hello", false));
+        myDataset.add(new Music("Hello1", "Hello1","Hello1", "hello1", false));
+        myDataset.add(new Music("Hello", "Hello","Hello", "hello", false));
+        myDataset.add(new Music("Hello1", "Hello1","Hello1", "hello1", false));
+        myDataset.add(new Music("Hello", "Hello","Hello", "hello", false));
+        myDataset.add(new Music("Hello1", "Hello1","Hello1", "hello1", false));
+        myDataset.add(new Music("Hello", "Hello","Hello", "hello", false));
+        myDataset.add(new Music("Hello1", "Hello1","Hello1", "hello1", false));
+        myDataset.add(new Music("Hello", "Hello","Hello", "hello", false));
+        myDataset.add(new Music("Hello1", "Hello1","Hello1", "hello1", false));
+        myDataset.add(new Music("Hello", "Hello","Hello", "hello", false));
+        myDataset.add(new Music("Hello1", "Hello1","Hello1", "hello1", false));
+        myDataset.add(new Music("Hello", "Hello","Hello", "hello", false));
+        myDataset.add(new Music("Hello1", "Hello1","Hello1", "hello1", false));
+        myDataset.add(new Music("Hello", "Hello","Hello", "hello", false));
         mAdapter = new MyAdapter(myDataset);
         recyclerView.setAdapter(mAdapter);
+        nowplay.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, Main2Activity.class);
+                MainActivity.this.startActivity(intent);
+            }
+        });
     }
 
     static void UpdateNP(Music current){
@@ -53,5 +78,9 @@ public class MainActivity extends AppCompatActivity {
         nowauthor.setText(current.getAllAuthors());
         nowplay.setVisibility(View.VISIBLE);
 
+    }
+
+    public static Music getNow_play(){
+        return now_playing;
     }
 }

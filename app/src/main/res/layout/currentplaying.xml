@@ -25,12 +25,14 @@
         android:paddingRight="32dp">
 
         <TextView
+            android:id="@+id/music_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             tools:text="Music"
             android:textSize="32sp"/>
 
         <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/music_authors"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             tools:text="Authors"
@@ -43,18 +45,21 @@
             android:padding="32dp">
 
             <ImageView
+                android:id="@+id/previous"
                 android:layout_width="0dp"
                 android:layout_height="69dp"
                 android:layout_weight="1"
                 android:src="@drawable/round_skip_previous_black_18dp" />
 
             <ImageView
+                android:id="@+id/main"
                 android:layout_width="0dp"
                 android:layout_height="69dp"
                 android:layout_weight="1"
-                android:src="@drawable/round_play_circle_filled_black_18dp" />
+                android:src="@drawable/round_pause_circle_filled_black_18dp" />
 
             <ImageView
+                android:id="@+id/next"
                 android:layout_width="0dp"
                 android:layout_height="69dp"
                 android:layout_weight="1"
