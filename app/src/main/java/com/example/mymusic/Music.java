@@ -6,8 +6,10 @@ public class Music {
     private String artist2;
     private String artist3;
     private boolean isplaying;
+    private int thumbnail;
 
-    public Music(String name1, String artist11, String artist21, String artist31, boolean isplaying1){
+    public Music(String name1, String artist11, String artist21, String artist31, boolean isplaying1, int thumbnail){
+        this.thumbnail=thumbnail;
         name=name1;
         artist1=artist11;
         artist2=artist21;
@@ -17,18 +19,6 @@ public class Music {
 
     public String getName() {
         return name;
-    }
-
-    public String getArtist1() {
-        return artist1;
-    }
-
-    public String getArtist2() {
-        return artist2;
-    }
-
-    public String getArtist3() {
-        return artist3;
     }
 
     public boolean getIsplaying() {
@@ -58,5 +48,9 @@ public class Music {
             ans+=arr[0]+", "+arr[1]+", "+arr[2];
         }
         return ans;
+    }
+
+    public int getThumbnail() {
+        return thumbnail;
     }
 }

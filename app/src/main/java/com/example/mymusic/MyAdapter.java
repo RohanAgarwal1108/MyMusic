@@ -1,12 +1,9 @@
 package com.example.mymusic;
 
-
-import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -33,7 +30,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
         final Music mymusic1=mymusic.get(position);
         holder.title.setText(mymusic1.getName());
         holder.authors.setText(mymusic1.getAllAuthors());
-        //holder.image.setImageDrawable(newImage(mymusic1));
+        holder.image.setImageResource(mymusic1.getThumbnail());
         holder.play_pause.setImageResource(getPlayPause(mymusic1));
         holder.play_pause.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -59,10 +56,10 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
 
     private int getPlayPause(Music music){
         if(music.getIsplaying()==true){
-            return R.drawable.baseline_pause_black_18dp;
+            return R.drawable.baseline_pause_black_18;
         }
         else{
-            return R.drawable.baseline_play_arrow_black_18dp;
+            return R.drawable.baseline_play_arrow_black_18;
         }
     }
 
