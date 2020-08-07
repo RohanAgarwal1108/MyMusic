@@ -8,26 +8,25 @@
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/my_recycler_view"
-        android:scrollbars="vertical"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        />
+        android:scrollbars="vertical" />
 
     <LinearLayout
-        android:visibility="invisible"
         android:id="@+id/now_playing"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:orientation="vertical"
         android:background="#ddd"
-        android:padding="16dp">
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:visibility="invisible">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="NOW PLAYING"
-            android:paddingBottom="8dp"/>
+            android:paddingBottom="8dp"
+            android:text="NOW PLAYING" />
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -37,27 +36,27 @@
                 android:id="@+id/nowimage"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
-                android:src="@drawable/ic_launcher_background"/>
+                android:src="@drawable/ic_launcher_background" />
 
             <TextView
-                android:layout_marginTop="4dp"
                 android:id="@+id/nowmusic"
-                android:textColor="@android:color/black"
-                android:layout_marginLeft="16dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="4dp"
                 android:layout_toEndOf="@id/nowimage"
-                tools:text="Music Name"/>
+                android:textColor="@android:color/black"
+                tools:text="Music Name" />
 
             <TextView
                 android:id="@+id/nowauthor"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/nowmusic"
-                android:layout_toEndOf="@id/nowimage"
                 android:layout_marginLeft="16dp"
                 android:layout_marginTop="4dp"
-                tools:text="Authors"/>
+                android:layout_toEndOf="@id/nowimage"
+                tools:text="Authors" />
 
         </RelativeLayout>
 

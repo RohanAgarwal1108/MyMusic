@@ -8,13 +8,13 @@ public class Music {
     private boolean isplaying;
     private int thumbnail;
 
-    public Music(String name1, String artist11, String artist21, String artist31, boolean isplaying1, int thumbnail){
-        this.thumbnail=thumbnail;
-        name=name1;
-        artist1=artist11;
-        artist2=artist21;
-        artist3=artist31;
-        isplaying=isplaying1;
+    public Music(String name, String artist1, String artist2, String artist3, boolean isplaying, int thumbnail) {
+        this.thumbnail = thumbnail;
+        this.name = name;
+        this.artist1 = artist1;
+        this.artist2 = artist2;
+        this.artist3 = artist3;
+        this.isplaying = isplaying;
     }
 
     public String getName() {
@@ -29,23 +29,20 @@ public class Music {
         this.isplaying = isplaying;
     }
 
-    public String getAllAuthors(){
-        String[] arr=new String[3];
-        arr[0]=artist1;
-        arr[1]=artist2;
-        arr[2]=artist3;
-        String ans="";
-        if(arr[0]==null) {
-            ans="Unknown";
-        }
-        else if(arr[1]==null){
-            ans+=arr[0];
-        }
-        else if (arr[2]==null){
-            ans+=arr[0]+", "+arr[1];
-        }
-        else{
-            ans+=arr[0]+", "+arr[1]+", "+arr[2];
+    public String getAllAuthors() {
+        String[] arr = new String[3];
+        arr[0] = artist1;
+        arr[1] = artist2;
+        arr[2] = artist3;
+        String ans = "";
+        if (arr[0] == null) {
+            ans = "Unknown";
+        } else if (arr[1] == null) {
+            ans += arr[0];
+        } else if (arr[2] == null) {
+            ans += arr[0] + ", " + arr[1];
+        } else {
+            ans += arr[0] + ", " + arr[1] + ", " + arr[2];
         }
         return ans;
     }
